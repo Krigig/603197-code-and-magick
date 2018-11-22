@@ -16,9 +16,13 @@ var eyesColors = ['black', 'red', 'blue', 'yellow', 'green'];
 
 var namesX = [];
 
+var random = function(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
 for (var i =0 ; i < 4; i++) {
-  var j = Math.floor(Math.random() * names.length);
-  var k = Math.floor(Math.random() * fornames.length);
+  var j = random(names);
+  var k = random(fornames);
 
   namesX[i] = names[j] + ' ' + fornames[k];
 }
@@ -26,9 +30,9 @@ for (var i =0 ; i < 4; i++) {
 var wizards = [];
 
 for (var i =0 ; i < 4; i++) {
-  var j = Math.floor(Math.random() * namesX.length);
-  var k = Math.floor(Math.random() * coatColors.length);
-  var m = Math.floor(Math.random() * eyesColors.length);
+  var j = random(namesX);
+  var k = random(coatColors);
+  var m = random(eyesColors);
 
   wizards[i] = {};
   wizards[i].name = namesX[j];
